@@ -48,7 +48,19 @@ const team = [
         imgFile: 'img/scott-estrada-developer.jpg',
     },
 ];
-console.log(team);
+
+//  // new member
+const addButton = document.getElementById('addMemberButton');
+
+addButton.addEventListener('click', function () {
+    const newMember = {
+        name: document.getElementById('name').value,
+        role: document.getElementById('role').value,
+        imgFile: document.getElementById('image').value,
+    }
+    team.push(newMember);
+    createCard();
+})
 
 // Functions
 function createCard() {
