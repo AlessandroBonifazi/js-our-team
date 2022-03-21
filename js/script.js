@@ -18,24 +18,34 @@ console.log('JS OK!');
 const container = document.querySelector('.team-container');
 const team = [
     {
-        name: 'Alex',
-        role: 'Web dev',
+        name: 'Angela Caroll',
+        role: 'Chief Editor',
         imgFile: 'img/angela-caroll-chief-editor.jpg',
     },
     {
-        name: 'Angela',
-        role: 'Web dev',
-        imgFile: 'img/angela-caroll-chief-editor.jpg',
+        name: 'Angela Lopez',
+        role: 'Social Media Manager',
+        imgFile: 'img/angela-lopez-social-media-manager.jpg',
     },
     {
-        name: 'Alex',
-        role: 'Web dev',
-        imgFile: 'img/angela-caroll-chief-editor.jpg',
+        name: 'Barbara Ramos',
+        role: 'Graphic Designer',
+        imgFile: 'img/barbara-ramos-graphic-designer.jpg',
     },
     {
-        name: 'Alex',
-        role: 'Web dev',
-        imgFile: 'img/angela-caroll-chief-editor.jpg',
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        imgFile: 'img/wayne-barnett-founder-ceo.jpg',
+    },
+    {
+        name: 'Walter Gordon',
+        role: 'Office Manager',
+        imgFile: 'img/walter-gordon-office-manager.jpg',
+    },
+    {
+        name: 'Scott Estrada',
+        role: 'Developer',
+        imgFile: 'img/scott-estrada-developer.jpg',
     },
 ];
 console.log(team);
@@ -47,16 +57,16 @@ function createCard() {
         const teamCard = document.createElement('div');
         teamCard.className = 'team-card';
         container.appendChild(teamCard);
-        // card-text
-        const cardText = document.createElement('div');
-        cardText.className = 'card-text';
-        teamCard.appendChild(cardText);
-        cardText.innerHTML = `<h3>${team[i].name}</h3><p>${team[i].role}</p>`;
         // card-img
         const cardImg = document.createElement('div');
         cardImg.className = 'card-image';
         teamCard.appendChild(cardImg);
         cardImg.innerHTML = `<img src="${team[i].imgFile}"/>`;
+        // card-text
+        const cardText = document.createElement('div');
+        cardText.className = 'card-text';
+        teamCard.appendChild(cardText);
+        cardText.innerHTML = `<h3>${team[i].name}</h3><p>${team[i].role}</p>`;
     }
 }
 createCard();
