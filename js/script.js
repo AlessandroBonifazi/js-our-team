@@ -15,5 +15,48 @@ console.log('JS OK!');
 // viene stampata una nuova card con tutte le informazioni inserite dall'utente.
 
 // Config
+const container = document.querySelector('.team-container');
+const team = [
+    {
+        name: 'Alex',
+        role: 'Web dev',
+        imgFile: 'img/angela-caroll-chief-editor.jpg',
+    },
+    {
+        name: 'Angela',
+        role: 'Web dev',
+        imgFile: 'img/angela-caroll-chief-editor.jpg',
+    },
+    {
+        name: 'Alex',
+        role: 'Web dev',
+        imgFile: 'img/angela-caroll-chief-editor.jpg',
+    },
+    {
+        name: 'Alex',
+        role: 'Web dev',
+        imgFile: 'img/angela-caroll-chief-editor.jpg',
+    },
+];
+console.log(team);
 
 // Functions
+function createCard() {
+    for (let i = 0; i < team.length; i++) {
+        // team-card
+        const teamCard = document.createElement('div');
+        teamCard.className = 'team-card';
+        container.appendChild(teamCard);
+        // card-text
+        const cardText = document.createElement('div');
+        cardText.className = 'card-text';
+        teamCard.appendChild(cardText);
+        cardText.innerHTML = `<h3>${team[i].name}</h3><p>${team[i].role}</p>`;
+        // card-img
+        const cardImg = document.createElement('div');
+        cardImg.className = 'card-image';
+        teamCard.appendChild(cardImg);
+        cardImg.innerHTML = `<img src="${team[i].imgFile}"/>`;
+    }
+}
+createCard();
